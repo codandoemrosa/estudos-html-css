@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+:root {
+    --font-color: #FFFFFF;
+    --bg-color-solid: #2e1e1e; 
+    --highlight-color: #FFFFEF;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--font-color);
+    font-size: 20px;
+    background-color: var(--bg-color-solid);
+    margin: auto;
+}
+
+.container {
+    max-width: 830px;
+    margin: auto;
+}
+
+/* ------- começo do banner -------*/
+
+header {
+    position: relative;
+    width: 100%;
+    height: auto
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 10%;
+    top: 20%;
+    font-size: 30px;
+}
+
+.divider {
+    width: 50%;
+    margin: 0px -10px;
+    z-index: -1;
+}
+
+header h1 {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 80px;
+}
+
+header img {
+    width: 100%;
+    transition: 0.4s;
+    -webkit-mask-image: url(assets/masking.png);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+}
+
+header img:hover {
+    filter: blur(0);
+}
+
+/*-------------fim do banner----------------*/
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color-solid);
+    margin: auto;
+}
+
+.section-1 h2 {
+    font-family: 'Petit Formal Script', cursive;
+    background-color: #554242;
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    font-size: 50px;
+    transition: 0.4s ease-in-out;
+}
+
+.section-1 h2:hover {
+    background-color: #FFFFEF;
+    color: var(--bg-color-solid);
+    margin: -1px 0px 0px 0px;
+}
+
+.section-1 h2::before {
+    content: "|";
+    margin: 0 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px;
+    border: solid 2px #ffffff;  
+    border-radius: 5px;
+
+}
+
+.content-text {
+    flex-direction: row;
+    padding: 10px;
+}
+
+.content p {
+    margin: 20px 0;
+}
+
+.content p::before {
+    content: "\2713";
+    margin-right: 10px;
+}
+
+/* end of section 1*/ 
+
+.section-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: var(--bg-color-solid);
+    margin: auto;
+}
+
+.section-2 h2 {
+    font-family: 'Petit Formal Script', cursive;
+    background-color: #554242;
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    font-size: 50px;
+    transition: 0.4s ease-in-out;
+}
+
+.section-2 h2:hover {
+    background-color: #FFFFEF;
+    color: var(--bg-color-solid);
+    margin: -1px 0px 0px 0px;
+}
+
+.section-2 h2::before {
+    content: "|";
+    margin: 0 10px;
+}
+
+.section-2 h3{
+    font-family: 'Petit Formal Script', cursive;
+    text-align: center;
+    padding: 10px;
+}
+
+.produtos {
+    padding: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.produtos:hover {
+    background-color: #FFFFEF;
+    color: #2e1e1e;
+    transition: 0.5s ease-in-out;
+}
+
+.card {
+   width: 500px;
+   text-align: center;
+}
+
+.img-card {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    filter: sepia(100);
+}
+
+.section-2 p {
+    text-align: center;
+}
+
+.section-2 p::before {
+    content: none;
+}
+
+.produto-preco {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 30px;
+    color: #554242;;
+    font-weight: 900;
+}
+
+/* end of section 2 */ 
+
+.section-3 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: var(#ffffff);
+}
+
+.bg-beneficios {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    filter: blur(4px);
+    transition: 0.4s ease-in-out;
+    -webkit-mask-image: url(assets/masking-2.png);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.beneficios {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+}
+
+.section-3 h2 {
+    font-family: 'Petit Formal Script', cursive;
+    padding: 20px 0px 20px 0px;
+    width: 65%;
+    font-size: 50px;
+    background-image: linear-gradient(#FFFFEF, #FFFFEF);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.4s ease-in-out;
+}
+
+.section-3 h2:hover {
+    background-size: 100% 100%;
+    color: var(--bg-color-solid);  
+}
+
+
+.section-3 h2::before {
+    content: "|";
+    margin: 0 10px;
+}
+
+.section-3 ul li {
+    margin: 10px;
+}
+
+
+.section-3 li::before {
+    content: "\2713";
+    margin-right: 10px;
+}
+
+/* end of section 3*/
+
+
+.section-4 h3 {
+    font-family: 'Petit Formal Script', cursive;
+    color: #FFFFEF;
+    padding: 20px 0px 0px 0px;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+}
+
+.section-4 p {
+    text-align: center;
+}
+.section-4 p::before{
+    content: none;
+}
+
+
+footer {
+    margin-top: 100px;
+    position: relative;
+    padding: px;
+    text-align: center;
+    background-color: #140e0e;
+    height: 50px;
+}
+
+footer p {
+    font-family: 'Petit Formal Script', cursive;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
