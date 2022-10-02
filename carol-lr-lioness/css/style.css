@@ -1,18 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
     font-family: 'Italiana', sans-serif;
-    letter-spacing: 0.2vw;
     font-weight: 600;
     max-width: 100%;
     height: auto;
     background-color: #000000;
     overflow-x: hidden;
+    font-size: 1.2vw;
+}
+
+body h2 {
+    text-transform: uppercase;
     font-size: 2vw;
+}
+
+body p {
+    font-family: 'Montserrat', sans-serif;
 }
 
 
 header {
+    width: 100%;
+}
+
+header .divider {
+    position: absolute;
+    top: 0;
     width: 100%;
 }
 
@@ -44,6 +59,7 @@ header {
 .apresentacao p {
     color: #FFFFFF;
     font-size: 1.8vw;
+    font-family: 'Italiana', sans-serif;
 }
 
 .cta p {
@@ -54,7 +70,8 @@ header {
 }
 
 .cta p::first-letter {
-    color: rgb(255, 195, 54);;
+    color: rgb(255, 195, 54);
+    ;
     font-size: 2.5vw;
 }
 
@@ -73,7 +90,8 @@ header {
     z-index: 1;
 }
 
-.button::before, .button::after {
+.button::before,
+.button::after {
     content: " ";
     position: absolute;
     transition: inherit;
@@ -96,35 +114,35 @@ header {
 
 /* TRANSITION */
 
-.from-left:before, 
+.from-left:before,
 .from-left:after {
-	top: 0;
-	width: 0;
-	height: 100%;
+    top: 0;
+    width: 0;
+    height: 100%;
 }
 
 .from-left:before {
-	right: 0;
-	border: 1px solid #FFFFFF;
-	border-left: 0;
-	border-right: 0;	
+    right: 0;
+    border: 1px solid #FFFFFF;
+    border-left: 0;
+    border-right: 0;
 }
 
 .from-left:after {
-	left: 0;
+    left: 0;
 }
 
 .from-left:hover:before,
 .from-left:hover:after {
-	width: 100%;
+    width: 100%;
 }
 
-/* end of button */ 
+/* end of button */
 
 .section-1 {
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
     margin-top: 5vw;
 }
 
@@ -161,7 +179,7 @@ h2 strong {
 .cards {
     display: flex;
     justify-content: center;
-    flex-direction:row;
+    flex-direction: row;
     width: 100%;
 }
 
@@ -202,7 +220,7 @@ h2 strong {
     flex-direction: column;
     font-size: 50px;
     color: rgb(255, 209, 102);
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }
 
 .card p {
@@ -237,8 +255,8 @@ h2 strong {
 .section-2 h2 {
     position: absolute;
     width: 70vw;
-    right: auto;
-    top: 30%;
+    right: 10%;
+    top: 35%;
     color: #FFFFFF;
     font-style: italic;
 }
@@ -249,6 +267,7 @@ h2 strong {
     display: flex;
     flex-direction: column;
     width: 100%;
+    text-align: center;
 }
 
 .curso {
@@ -257,14 +276,24 @@ h2 strong {
     width: 100%;
 }
 
-.curso img {
+.card-curso {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    padding-right: px;
+    padding: 50px;
+    margin: auto;
+}
+
+.curso img {
+    width: 600px;
     height: fit-content;
 }
 
 .curso p {
     text-align: left;
-    width: 80%;
+    width: 500px;
+    font-size: 1.2vw;
 }
 
 .curso p::first-letter {
@@ -272,14 +301,14 @@ h2 strong {
     font-size: 2.5vw;
 }
 
-.curso p:nth-child(2n){
-    font-size: 1.5vw;
-    margin-top: 50px;
+.curso p:nth-child(2n) {
+    font-size: 1vw;
+    margin-top: 30px;
 }
 
 .curso p:nth-child(2n)::first-letter {
     color: #FFFFFF;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 .curso-text {
@@ -288,10 +317,20 @@ h2 strong {
 }
 
 .section-2 .button {
-    width: 50%;
-    margin-left: 0;
+    margin-top: 50px;
+    font-size: 1vw;
+}
+
+.section-2 .button:hover {
+    color: black;
+    transition-delay: 0.4s;
+}
+
+.section-2 .button a {
+
+    position: relative;
+    width: 30%;
     margin-top: 2vw;
-    font-size: 1.5vw;
 }
 
 /* effect */
@@ -300,7 +339,7 @@ h2 strong {
     position: absolute;
     width: 70vw;
     right: auto;
-    top: 30%;
+    top: 35%;
     color: #FFFFFF;
     font-style: italic;
 }
@@ -338,11 +377,16 @@ iframe {
 .section-4 {
     position: relative;
     display: flex;
+    flex-direction: column;
     width: 100%;
     color: #FFFFFF;
-    flex-direction: row;
     font-size: 1.5vw;
-    margin-top: 70px;
+}
+
+.section-4 img .divider {
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .bg {
@@ -353,16 +397,15 @@ iframe {
 
 .bg img {
     max-width: 100%;
-
 }
 
 .objections {
     display: flex;
     width: 60%;
-    margin-top: 100px;
+    margin: 100px;
 }
 
-.objections p:first-child{
+.objections p:first-child {
     font-size: 3vw;
     color: rgb(255, 195, 54);
     text-align: left;
@@ -378,6 +421,7 @@ iframe {
     display: flex;
     flex-direction: column;
     width: 100%;
+    text-align: left;
 }
 
 
@@ -396,24 +440,32 @@ iframe {
 }
 
 .section-4 .button {
-    position: relative;
-    margin: auto;
-    width: 50%;
+    width: 30%;
+    margin: 50px 10px 10px 100px;
     max-height: 200px;
+    margin-top: 50px;
 }
 
-.section-4 .button a {
-    text-decoration: none;
-    color: #FFFFFF;
+
+.section-2 .button a {
+    position: relative;
+    width: 30%;
+    margin-top: 2vw;
 }
 
 /* SECTION-5 */
 
 .section-5 {
+    position: relative;
     width: 100%;
     color: #FFFFFF;
-    margin: 200px 0px;
-    text-align: center;
+    margin-top: 200px;
+    padding-bottom: 100px;
+}
+
+.section-5 img {
+    bottom: 0;
+    transform: scaleX(-1);
 }
 
 .para-quem {
@@ -460,6 +512,7 @@ iframe {
 }
 
 .section-5 li {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     text-align: left;
     padding: 10px;
@@ -480,18 +533,10 @@ iframe {
     margin-bottom: 50px;
 }
 
-.section-5 .button {
-    position: relative;
-}
-
-.section-5 .button a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
 /* INICIO DA SECTION 6 */
 
 .section-6 {
+    position: relative;
     width: 100%;
     color: #FFFFFF;
     font-size: 1.2vw;
@@ -501,29 +546,141 @@ iframe {
 
 .section-6 h2 {
     position: absolute;
-    width: 100%;
-    top: 30%;
-    right: auto;
+    font-size: 1.5vw;
+    width: 40vw;
+    right: 5%;
+    top: 35%;
     color: #FFFFFF;
     font-style: italic;
 }
 
+.section-6 .title-divider {
+    width: 40vw;
+}
+
+.section-6 .divider {
+    top: 0;
+    width: 100%;
+}
+
+.section-6 h3 {
+    color: rgb(255, 195, 54);
+    margin: 20px 0px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 2.0vw;
+}
+
+
+.section-6 h3::before {
+    content: "| ";
+}
+
+
 .apresentacao-box {
+    right: 1vw;
     display: flex;
-    flex-direction: row;
-    margin: 200px;
+    flex-direction: row-reverse;
+    text-align: center;
+    margin: 100px;
+    text-align: right;
 }
 
 .foto-carol {
-    width: 30%;
+    width: 100%;
 }
 
-.apresentacao-texto {
-    max-width: 60%;
-    text-align: left;
-    margin: 20px;
+.foto-carol img {
+    width: 100%;.
 }
 
-.apresentacao-texto p {
+.apresentacao-carol {
+    max-width: 50%;
     text-align: left;
+    padding: 0px 80px;
+}
+
+.apresentacao-carol p {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.apresentacao-carol p strong {
+    font-family: 'Italiana', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.apresentacao-carol p em {
+    font-weight: 900;
+}
+
+.section-7 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+.help {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+
+.help h3 {
+    color: rgb(255, 195, 54);
+    margin: 20px 0px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 2.0vw;
+}
+
+
+.help-item .button-box {
+    margin-top: 5%;
+    margin-left: -40%;
+}
+
+.help-item {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 100px;
+    color: #FFFFFF;
+}
+
+.help-item p {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(255, 195, 54);
+}
+
+.copy {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+.copy p {
+    color: #ffffff;
+    font-family: 'Italiana', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
 }
